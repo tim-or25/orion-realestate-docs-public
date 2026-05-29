@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="920" viewBox="0 0 1500 920" role="img" aria-labelledby="title desc">
+  <title id="title">BORB Current to Future Module Mapping</title>
+  <desc id="desc">Mapping of current BORB modules to the new foundational architecture.</desc>
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="left5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#172554"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="right5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#133b4f"/>
+      <stop offset="100%" stop-color="#164e63"/>
+    </linearGradient>
+    <marker id="arrow5" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7dd3fc"/>
+    </marker>
+    <style>
+      .title { font: 700 32px Georgia, serif; fill: #f2c75c; }
+      .sub { font: 500 16px Arial, sans-serif; fill: #aed0f6; }
+      .left { fill: url(#left5); stroke: rgba(196,181,253,.35); stroke-width: 2; rx: 16; ry: 16; }
+      .right { fill: url(#right5); stroke: rgba(125,211,252,.35); stroke-width: 2; rx: 16; ry: 16; }
+      .label { font: 700 18px Arial, sans-serif; fill: #eef4ff; }
+      .small { font: 500 14px Arial, sans-serif; fill: #d7e7ff; }
+      .line { stroke: #7dd3fc; stroke-width: 3; fill: none; marker-end: url(#arrow5); }
+    </style>
+  </defs>
+  <rect width="1500" height="920" fill="url(#bg5)"/>
+  <text x="60" y="70" class="title">Current-to-Future Module Mapping</text>
+  <text x="60" y="100" class="sub">Existing BORB modules stay, but they move downstream of a new market-grounded underwriting foundation.</text>
+
+  <text x="280" y="170" text-anchor="middle" class="label">Current BORB</text>
+  <text x="1100" y="170" text-anchor="middle" class="label">New Core Foundation</text>
+
+  <rect x="100" y="220" width="360" height="72" class="left"/>
+  <rect x="100" y="320" width="360" height="72" class="left"/>
+  <rect x="100" y="420" width="360" height="72" class="left"/>
+  <rect x="100" y="520" width="360" height="72" class="left"/>
+  <rect x="100" y="620" width="360" height="72" class="left"/>
+  <rect x="100" y="720" width="360" height="72" class="left"/>
+
+  <text x="280" y="264" text-anchor="middle" class="label">Onboarding</text>
+  <text x="280" y="364" text-anchor="middle" class="label">Simulation</text>
+  <text x="280" y="464" text-anchor="middle" class="label">Optimization</text>
+  <text x="280" y="564" text-anchor="middle" class="label">IRR</text>
+  <text x="280" y="664" text-anchor="middle" class="label">Valuation</text>
+  <text x="280" y="764" text-anchor="middle" class="label">Compare</text>
+
+  <rect x="840" y="220" width="420" height="80" class="right"/>
+  <rect x="840" y="340" width="420" height="80" class="right"/>
+  <rect x="840" y="460" width="420" height="80" class="right"/>
+  <rect x="840" y="580" width="420" height="80" class="right"/>
+
+  <text x="1050" y="264" text-anchor="middle" class="label">Market Data Foundation</text>
+  <text x="1050" y="292" text-anchor="middle" class="small">reputable vendor data and benchmark normalization</text>
+
+  <text x="1050" y="384" text-anchor="middle" class="label">Assumption Validation + Provenance</text>
+  <text x="1050" y="412" text-anchor="middle" class="small">trust scoring, outlier checks, source labeling</text>
+
+  <text x="1050" y="504" text-anchor="middle" class="label">Underwriting Problem Layer</text>
+  <text x="1050" y="532" text-anchor="middle" class="small">supports Path A and Path B before scenario generation</text>
+
+  <text x="1050" y="624" text-anchor="middle" class="label">Reverse Solve / Constraint Engine</text>
+  <text x="1050" y="652" text-anchor="middle" class="small">feasible scenario generation from target outcomes</text>
+
+  <path d="M460 256 L840 256" class="line"/>
+  <path d="M460 356 L840 256" class="line"/>
+  <path d="M460 456 L840 256" class="line"/>
+  <path d="M460 556 L840 256" class="line"/>
+  <path d="M460 656 L840 256" class="line"/>
+  <path d="M460 756 L840 256" class="line"/>
+
+  <path d="M460 256 L840 376" class="line"/>
+  <path d="M460 356 L840 376" class="line"/>
+  <path d="M460 456 L840 376" class="line"/>
+  <path d="M460 556 L840 376" class="line"/>
+  <path d="M460 656 L840 376" class="line"/>
+  <path d="M460 756 L840 376" class="line"/>
+
+  <path d="M460 256 L840 496" class="line"/>
+  <path d="M460 556 L840 496" class="line"/>
+  <path d="M460 756 L840 496" class="line"/>
+
+  <path d="M460 256 L840 616" class="line"/>
+  <path d="M460 556 L840 616" class="line"/>
+  <path d="M460 756 L840 616" class="line"/>
+</svg>

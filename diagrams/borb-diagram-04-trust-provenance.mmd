@@ -1,0 +1,17 @@
+flowchart TD
+    A["Any Assumption in BORB"] --> B{"Source Type"}
+
+    B --> C["Vendor-backed"]
+    B --> D["User-entered"]
+    B --> E["Inferred"]
+    B --> F["Out-of-bounds"]
+
+    C --> G["High Trust"]
+    D --> H["Medium Trust if market-valid"]
+    E --> I["Medium / Low Trust"]
+    F --> J["Low Trust + Warning"]
+
+    G --> K["Used by all engines"]
+    H --> K
+    I --> K
+    J --> K

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="760" viewBox="0 0 1300 760" role="img" aria-labelledby="title desc">
+  <title id="title">BORB Trust and Provenance Model</title>
+  <desc id="desc">Trust and provenance model for assumptions used throughout BORB.</desc>
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="card4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#13243d"/>
+      <stop offset="100%" stop-color="#233b63"/>
+    </linearGradient>
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#93c5fd"/>
+    </marker>
+    <style>
+      .title { font: 700 32px Georgia, serif; fill: #f2c75c; }
+      .sub { font: 500 16px Arial, sans-serif; fill: #a7c7ec; }
+      .card { fill: url(#card4); stroke: rgba(148,163,184,.35); stroke-width: 2; rx: 18; ry: 18; }
+      .label { font: 700 18px Arial, sans-serif; fill: #edf4ff; }
+      .small { font: 500 14px Arial, sans-serif; fill: #c9daf7; }
+      .line { stroke: #93c5fd; stroke-width: 3; fill: none; marker-end: url(#arrow4); }
+    </style>
+  </defs>
+  <rect width="1300" height="760" fill="url(#bg4)"/>
+  <text x="60" y="70" class="title">Trust / Provenance Model</text>
+  <text x="60" y="100" class="sub">Every major assumption should carry a source label and a trust interpretation before it flows into downstream engines.</text>
+
+  <rect x="450" y="160" width="400" height="90" class="card"/>
+  <text x="650" y="198" text-anchor="middle" class="label">Any Assumption in BORB</text>
+  <text x="650" y="224" text-anchor="middle" class="small">rent, cap rate, growth, vacancy, financing, exit, expense assumptions</text>
+
+  <rect x="80" y="340" width="230" height="120" class="card"/>
+  <rect x="380" y="340" width="230" height="120" class="card"/>
+  <rect x="680" y="340" width="230" height="120" class="card"/>
+  <rect x="980" y="340" width="230" height="120" class="card"/>
+
+  <text x="195" y="384" text-anchor="middle" class="label">Vendor-backed</text>
+  <text x="195" y="412" text-anchor="middle" class="small">direct market benchmark</text>
+  <text x="195" y="434" text-anchor="middle" class="small">highest trust</text>
+
+  <text x="495" y="384" text-anchor="middle" class="label">User-entered</text>
+  <text x="495" y="412" text-anchor="middle" class="small">explicit analyst judgment</text>
+  <text x="495" y="434" text-anchor="middle" class="small">medium trust if market-valid</text>
+
+  <text x="795" y="384" text-anchor="middle" class="label">Inferred</text>
+  <text x="795" y="412" text-anchor="middle" class="small">system-assisted completion</text>
+  <text x="795" y="434" text-anchor="middle" class="small">medium / low trust</text>
+
+  <text x="1095" y="384" text-anchor="middle" class="label">Out-of-bounds</text>
+  <text x="1095" y="412" text-anchor="middle" class="small">fails market realism checks</text>
+  <text x="1095" y="434" text-anchor="middle" class="small">low trust + warning</text>
+
+  <rect x="330" y="560" width="640" height="110" class="card"/>
+  <text x="650" y="602" text-anchor="middle" class="label">Used by All Engines</text>
+  <text x="650" y="630" text-anchor="middle" class="small">Simulation · Optimization · IRR · Valuation · Compare · Reverse Solve</text>
+
+  <path d="M650 250 L650 300 L195 300 L195 340" class="line"/>
+  <path d="M650 250 L650 300 L495 300 L495 340" class="line"/>
+  <path d="M650 250 L650 300 L795 300 L795 340" class="line"/>
+  <path d="M650 250 L650 300 L1095 300 L1095 340" class="line"/>
+  <path d="M195 460 L195 510 L650 510 L650 560" class="line"/>
+  <path d="M495 460 L495 560" class="line"/>
+  <path d="M795 460 L795 560" class="line"/>
+  <path d="M1095 460 L1095 510 L650 510 L650 560" class="line"/>
+</svg>

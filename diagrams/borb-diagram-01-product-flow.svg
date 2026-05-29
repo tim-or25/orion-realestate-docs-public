@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1240" viewBox="0 0 1600 1240" role="img" aria-labelledby="title desc">
+  <title id="title">BORB Product Flow Diagram</title>
+  <desc id="desc">High-level product flow for BORB showing dual entry modes, market grounding, scenario generation, and downstream decision engines.</desc>
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#13243d"/>
+    </linearGradient>
+    <linearGradient id="panel1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14243b"/>
+      <stop offset="100%" stop-color="#1d3557"/>
+    </linearGradient>
+    <linearGradient id="panel2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b2845"/>
+      <stop offset="100%" stop-color="#2a1f4d"/>
+    </linearGradient>
+    <linearGradient id="panel3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#173a4f"/>
+      <stop offset="100%" stop-color="#164e63"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7dd3fc"/>
+    </marker>
+    <style>
+      .title { font: 700 34px Georgia, serif; fill: #f2c75c; }
+      .subtitle { font: 500 16px Arial, sans-serif; fill: #9cc6f3; }
+      .box { stroke: rgba(148,163,184,.35); stroke-width: 2; rx: 18; ry: 18; }
+      .label { font: 700 18px Arial, sans-serif; fill: #e5eefc; }
+      .small { font: 500 14px Arial, sans-serif; fill: #bfd4f5; }
+      .tiny { font: 500 13px Arial, sans-serif; fill: #a8c0e8; }
+      .line { stroke: #7dd3fc; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .line2 { stroke: #c084fc; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1240" fill="url(#bg1)"/>
+  <text x="70" y="72" class="title">BORB Product Flow</text>
+  <text x="70" y="102" class="subtitle">Dual-entry underwriting system with shared market grounding, scenario generation, and downstream decision engines.</text>
+
+  <rect x="610" y="140" width="380" height="84" class="box" fill="url(#panel1)"/>
+  <text x="800" y="178" text-anchor="middle" class="label">User Enters BORB</text>
+  <text x="800" y="204" text-anchor="middle" class="small">Choose how underwriting begins</text>
+
+  <rect x="240" y="280" width="440" height="140" class="box" fill="url(#panel2)"/>
+  <text x="460" y="320" text-anchor="middle" class="label">Path A: Start from Known Assumptions</text>
+  <text x="460" y="352" text-anchor="middle" class="small">Manual input, bulk upload, existing scenario,</text>
+  <text x="460" y="374" text-anchor="middle" class="small">or market-assisted fill of known deal assumptions</text>
+
+  <rect x="920" y="280" width="440" height="140" class="box" fill="url(#panel2)"/>
+  <text x="1140" y="320" text-anchor="middle" class="label">Path B: Start from Target Metrics / Constraints</text>
+  <text x="1140" y="352" text-anchor="middle" class="small">IRR target, cap rate target, DSCR floor,</text>
+  <text x="1140" y="374" text-anchor="middle" class="small">price limits, leverage limits, stress conditions</text>
+
+  <rect x="450" y="480" width="700" height="130" class="box" fill="url(#panel3)"/>
+  <text x="800" y="520" text-anchor="middle" class="label">Shared Market Data Foundation</text>
+  <text x="800" y="550" text-anchor="middle" class="small">Vendor-backed benchmark extraction: rents, cap rates, vacancy, growth, financing context, exit context</text>
+  <text x="800" y="576" text-anchor="middle" class="tiny">No major market-facing metric should exist without a market reference, user override, or explicit unsourced label.</text>
+
+  <rect x="450" y="660" width="700" height="130" class="box" fill="url(#panel1)"/>
+  <text x="800" y="700" text-anchor="middle" class="label">Assumption Validation + Provenance</text>
+  <text x="800" y="730" text-anchor="middle" class="small">Compare assumptions against benchmarks, flag outliers, assign trust levels, and record source provenance</text>
+  <text x="800" y="756" text-anchor="middle" class="tiny">Vendor-backed · User-entered · Inferred · Out-of-bounds</text>
+
+  <rect x="450" y="840" width="700" height="100" class="box" fill="url(#panel2)"/>
+  <text x="800" y="880" text-anchor="middle" class="label">Underwriting Problem Layer</text>
+  <text x="800" y="910" text-anchor="middle" class="small">Common problem-definition object for forward and reverse underwriting</text>
+
+  <rect x="180" y="1010" width="430" height="120" class="box" fill="url(#panel1)"/>
+  <text x="395" y="1050" text-anchor="middle" class="label">Path A Resolution</text>
+  <text x="395" y="1080" text-anchor="middle" class="small">Validate and complete assumptions</text>
+  <text x="395" y="1104" text-anchor="middle" class="small">then generate a runnable scenario</text>
+
+  <rect x="990" y="1010" width="430" height="120" class="box" fill="url(#panel1)"/>
+  <text x="1205" y="1050" text-anchor="middle" class="label">Path B Resolution</text>
+  <text x="1205" y="1080" text-anchor="middle" class="small">Reverse solve to a feasible scenario set</text>
+  <text x="1205" y="1104" text-anchor="middle" class="small">Market-Aligned · Conservative · Stretched</text>
+
+  <rect x="650" y="1000" width="300" height="140" class="box" fill="url(#panel3)"/>
+  <text x="800" y="1040" text-anchor="middle" class="label">Scenario Store</text>
+  <text x="800" y="1070" text-anchor="middle" class="small">Canonical runnable scenario unit</text>
+  <text x="800" y="1094" text-anchor="middle" class="tiny">feeds all downstream analysis engines</text>
+
+  <rect x="90" y="1160" width="220" height="52" class="box" fill="#19324f"/>
+  <rect x="340" y="1160" width="220" height="52" class="box" fill="#19324f"/>
+  <rect x="590" y="1160" width="220" height="52" class="box" fill="#19324f"/>
+  <rect x="840" y="1160" width="220" height="52" class="box" fill="#19324f"/>
+  <rect x="1090" y="1160" width="220" height="52" class="box" fill="#19324f"/>
+  <rect x="1340" y="1160" width="180" height="52" class="box" fill="#19324f"/>
+
+  <text x="200" y="1192" text-anchor="middle" class="small">Simulation</text>
+  <text x="450" y="1192" text-anchor="middle" class="small">Optimization</text>
+  <text x="700" y="1192" text-anchor="middle" class="small">IRR / Return Lab</text>
+  <text x="950" y="1192" text-anchor="middle" class="small">Valuation</text>
+  <text x="1200" y="1192" text-anchor="middle" class="small">Compare</text>
+  <text x="1430" y="1192" text-anchor="middle" class="small">Decision Layer</text>
+
+  <path d="M800 224 L800 260 L460 260 L460 280" class="line"/>
+  <path d="M800 224 L800 260 L1140 260 L1140 280" class="line2"/>
+  <path d="M460 420 L460 450 L800 450 L800 480" class="line"/>
+  <path d="M1140 420 L1140 450 L800 450 L800 480" class="line2"/>
+  <path d="M800 610 L800 660" class="line"/>
+  <path d="M800 790 L800 840" class="line"/>
+  <path d="M800 940 L800 970" class="line"/>
+  <path d="M800 970 L395 970 L395 1010" class="line"/>
+  <path d="M800 970 L1205 970 L1205 1010" class="line2"/>
+  <path d="M395 1130 L395 1144 L800 1144 L800 1000" class="line"/>
+  <path d="M1205 1130 L1205 1144 L800 1144 L800 1000" class="line2"/>
+  <path d="M800 1140 L800 1150" class="line"/>
+</svg>

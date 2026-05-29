@@ -1,0 +1,92 @@
+classDiagram
+    class MarketDataFoundation {
+      +fetchBenchmarks(assetType, geo, dealContext)
+      +normalizeVendorData()
+      +exposeMarketRanges()
+    }
+
+    class AssumptionValidationEngine {
+      +validateAgainstMarket(assumptions, benchmarks)
+      +flagOutOfBounds()
+      +assignTrustLevel()
+      +buildProvenanceMap()
+    }
+
+    class UnderwritingProblem {
+      +entryMode
+      +knownAssumptions
+      +targetMetrics
+      +constraints
+      +marketContext
+      +trustState
+    }
+
+    class ReverseSolveEngine {
+      +solve(problem, benchmarks, constraints)
+      +generateFeasibleSet()
+      +rankByMarketAlignment()
+    }
+
+    class ScenarioGenerator {
+      +fromKnownAssumptions(problem)
+      +fromFeasibleSolutions(solutionSet)
+      +buildScenario()
+    }
+
+    class ScenarioStore {
+      +saveScenario()
+      +loadScenario()
+      +versionScenario()
+    }
+
+    class SimulationEngine {
+      +runSensitivityAnalysis(scenario)
+      +stressAssumptions(scenario)
+    }
+
+    class OptimizationEngine {
+      +optimizeWithinMarketBounds(scenario)
+      +explainOptimizedChanges()
+    }
+
+    class IRRLab {
+      +runDeterministicIRR(scenario)
+      +runMonteCarlo(scenario)
+      +modelRefiAndExit(scenario)
+    }
+
+    class ValuationEngine {
+      +deriveValuation(scenario, benchmarks)
+    }
+
+    class CompareEngine {
+      +compareScenarios(scenarios)
+      +rankScenarios()
+      +highlightTrustDifferences()
+    }
+
+    class DecisionLayer {
+      +summarizeDrivers()
+      +identifyConstraintBreaches()
+      +surfaceInvalidationRisks()
+      +storeDecisionMemory()
+    }
+
+    MarketDataFoundation --> AssumptionValidationEngine
+    AssumptionValidationEngine --> UnderwritingProblem
+    UnderwritingProblem --> ReverseSolveEngine
+    UnderwritingProblem --> ScenarioGenerator
+    ReverseSolveEngine --> ScenarioGenerator
+    ScenarioGenerator --> ScenarioStore
+
+    ScenarioStore --> SimulationEngine
+    ScenarioStore --> OptimizationEngine
+    ScenarioStore --> IRRLab
+    ScenarioStore --> ValuationEngine
+    ScenarioStore --> CompareEngine
+
+    SimulationEngine --> DecisionLayer
+    OptimizationEngine --> DecisionLayer
+    IRRLab --> DecisionLayer
+    ValuationEngine --> DecisionLayer
+    CompareEngine --> DecisionLayer

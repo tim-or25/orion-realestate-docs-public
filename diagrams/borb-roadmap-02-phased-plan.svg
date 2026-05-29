@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="980" viewBox="0 0 1700 980" role="img" aria-labelledby="title desc">
+  <title id="title">BORB Phased Roadmap</title>
+  <desc id="desc">Four-phase product roadmap for transforming BORB into a market-grounded, constraint-aware institutional underwriting system.</desc>
+  <defs>
+    <linearGradient id="bgr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="p1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#173a4f"/>
+      <stop offset="100%" stop-color="#164e63"/>
+    </linearGradient>
+    <linearGradient id="p2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#223b24"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+    <linearGradient id="p3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3f2a12"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <linearGradient id="p4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 34px Georgia, serif; fill: #f2c75c; }
+      .sub { font: 500 16px Arial, sans-serif; fill: #a9c8ee; }
+      .panel { stroke: rgba(148,163,184,.28); stroke-width: 2; rx: 22; ry: 22; }
+      .h { font: 700 24px Arial, sans-serif; fill: #eef4ff; }
+      .label { font: 700 16px Arial, sans-serif; fill: #f9fbff; }
+      .item { font: 500 14px Arial, sans-serif; fill: #d7e6ff; }
+      .note { font: 500 13px Arial, sans-serif; fill: #c2d7fb; }
+      .chip { fill: rgba(255,255,255,.06); stroke: rgba(255,255,255,.12); stroke-width: 1; rx: 12; ry: 12; }
+    </style>
+  </defs>
+  <rect width="1700" height="980" fill="url(#bgr)"/>
+  <text x="60" y="72" class="title">BORB Phased Roadmap</text>
+  <text x="60" y="102" class="sub">Execution order for restoring trust first, then adding differentiation through reverse solving and institutional decision logic.</text>
+
+  <rect x="60" y="150" width="360" height="730" class="panel" fill="url(#p1)"/>
+  <rect x="460" y="150" width="360" height="730" class="panel" fill="url(#p2)"/>
+  <rect x="860" y="150" width="360" height="730" class="panel" fill="url(#p3)"/>
+  <rect x="1260" y="150" width="360" height="730" class="panel" fill="url(#p4)"/>
+
+  <text x="90" y="200" class="h">Phase 1</text>
+  <text x="90" y="232" class="label">Restore Trust</text>
+  <text x="490" y="200" class="h">Phase 2</text>
+  <text x="490" y="232" class="label">Add Real Differentiation</text>
+  <text x="890" y="200" class="h">Phase 3</text>
+  <text x="890" y="232" class="label">Refactor Existing Engines</text>
+  <text x="1290" y="200" class="h">Phase 4</text>
+  <text x="1290" y="232" class="label">Institutional UX + Scale</text>
+
+  <g transform="translate(90 280)">
+    <rect width="300" height="44" class="chip"/><text x="18" y="28" class="label">Vendor-backed market data</text>
+    <rect y="60" width="300" height="44" class="chip"/><text x="18" y="88" class="label">Assumption validation rails</text>
+    <rect y="120" width="300" height="44" class="chip"/><text x="18" y="148" class="label">Provenance + trust labels</text>
+    <rect y="180" width="300" height="44" class="chip"/><text x="18" y="208" class="label">Remove synthetic market context</text>
+    <rect y="240" width="300" height="44" class="chip"/><text x="18" y="268" class="label">Fix unrealistic benchmark targets</text>
+    <text y="340" class="item">Goal: no major metric appears without</text>
+    <text y="364" class="item">a source, validation path, or explicit low-trust label.</text>
+  </g>
+
+  <g transform="translate(490 280)">
+    <rect width="300" height="44" class="chip"/><text x="18" y="28" class="label">Underwriting Problem object</text>
+    <rect y="60" width="300" height="44" class="chip"/><text x="18" y="88" class="label">Path B reverse-solve intake</text>
+    <rect y="120" width="300" height="44" class="chip"/><text x="18" y="148" class="label">Constraint engine</text>
+    <rect y="180" width="300" height="44" class="chip"/><text x="18" y="208" class="label">Feasible scenario-set generation</text>
+    <rect y="240" width="300" height="44" class="chip"/><text x="18" y="268" class="label">Market-Aligned / Conservative / Stretched</text>
+    <text y="340" class="item">Goal: BORB stops being just a forward calculator</text>
+    <text y="364" class="item">and starts solving target-led underwriting problems.</text>
+  </g>
+
+  <g transform="translate(890 280)">
+    <rect width="300" height="44" class="chip"/><text x="18" y="28" class="label">Simulation under real bounds</text>
+    <rect y="60" width="300" height="44" class="chip"/><text x="18" y="88" class="label">Optimization within market realism</text>
+    <rect y="120" width="300" height="44" class="chip"/><text x="18" y="148" class="label">IRR with assumption provenance</text>
+    <rect y="180" width="300" height="44" class="chip"/><text x="18" y="208" class="label">Compare with trust-aware context</text>
+    <rect y="240" width="300" height="44" class="chip"/><text x="18" y="268" class="label">Valuation only if comp-grounded</text>
+    <text y="340" class="item">Goal: keep the existing product core, but make it run</text>
+    <text y="364" class="item">on trusted, defensible, institutionally credible inputs.</text>
+  </g>
+
+  <g transform="translate(1290 280)">
+    <rect width="300" height="44" class="chip"/><text x="18" y="28" class="label">Dual-entry onboarding UX</text>
+    <rect y="60" width="300" height="44" class="chip"/><text x="18" y="88" class="label">Institutional wording refresh</text>
+    <rect y="120" width="300" height="44" class="chip"/><text x="18" y="148" class="label">Decision memory + governance</text>
+    <rect y="180" width="300" height="44" class="chip"/><text x="18" y="208" class="label">Portfolio intelligence layer</text>
+    <rect y="240" width="300" height="44" class="chip"/><text x="18" y="268" class="label">Scalable repeatability</text>
+    <text y="340" class="item">Goal: make BORB feel like institutional software,</text>
+    <text y="364" class="item">not a prettier or more complicated spreadsheet.</text>
+  </g>
+
+  <g transform="translate(80 760)">
+    <text class="note">Phase 1 is the non-negotiable foundation. Phase 2 is the primary differentiation wedge.</text>
+    <text y="24" class="note">Phases 3 and 4 only create durable value if Phases 1 and 2 are done credibly first.</text>
+  </g>
+</svg>

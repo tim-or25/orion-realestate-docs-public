@@ -1,0 +1,33 @@
+flowchart TD
+    A["Current BORB"] --> B["Onboarding"]
+    A --> C["Simulation"]
+    A --> D["Optimization"]
+    A --> E["IRR"]
+    A --> F["Valuation"]
+    A --> G["Compare"]
+
+    H["New Core Foundation"] --> I["Market Data Foundation"]
+    H --> J["Assumption Validation + Provenance"]
+    H --> K["Underwriting Problem Layer"]
+    H --> L["Reverse Solve / Constraint Engine"]
+
+    I --> B
+    I --> C
+    I --> D
+    I --> E
+    I --> F
+    I --> G
+
+    J --> B
+    J --> C
+    J --> D
+    J --> E
+    J --> F
+    J --> G
+
+    K --> B
+    K --> L
+    L --> E
+    L --> C
+    L --> D
+    L --> G
