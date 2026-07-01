@@ -1,10 +1,14 @@
 # Orion Rigel Public Documentation
 
-## At A Glance
+## ✨ At A Glance
 
 Entry point for the public Orion Rigel documentation set, covering user-facing workflows, interpretation guidance, and support-safe troubleshooting boundaries.
 
-## How To Use This README
+## 🎨 Reader Promise
+
+> You should be able to land here, pick the right guide in seconds, and know what belongs in public docs versus internal runbooks.
+
+## 🧭 How To Use This README
 
 - Start here to find the public guide for a specific user workflow.
 - Use the contents list to keep topic READMEs discoverable and consistently named.
@@ -12,7 +16,7 @@ Entry point for the public Orion Rigel documentation set, covering user-facing w
 
 Public user documentation for Orion Rigel, focused on product workflows, safe interpretation guidance, and support-ready troubleshooting.
 
-## Contents
+## 🗂️ Contents
 
 - [Dashboard Basics](./dashboard/README.md)
 - [Collections and Scenarios](./collections-scenarios/README.md)
@@ -24,11 +28,11 @@ Public user documentation for Orion Rigel, focused on product workflows, safe in
 - [Integrations](./integrations/README.md)
 - [Logging and Support Signals](./logging/README.md)
 
-## Audience
+## 👥 Audience
 
 These docs are written for non-admin users who need to understand where features live, how to complete common workflows, and how to interpret outputs responsibly.
 
-## Public Documentation Rules
+## 🌐 Public Documentation Rules
 
 Keep these guides focused on user-visible behavior:
 
@@ -36,6 +40,6 @@ Keep these guides focused on user-visible behavior:
 - Avoid internal architecture, privileged admin procedures, secrets, infrastructure details, and private operational runbooks.
 - Use support-friendly language when a user should stop, retry, or ask for help.
 
-## Maintenance Notes
+## 🛠️ Maintenance Notes
 
 When adding or updating public docs, make sure each README includes a clear purpose, what users can do, public-safe guidance, and any important limitations.
