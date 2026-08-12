@@ -23,6 +23,7 @@ Public user documentation for Orion Rigel, focused on product workflows, safe in
 - [Simulations](./simulations/README.md)
 - [Metrics and KPI Basics](./metrics/README.md)
 - [Optimization How-To](./optimization/README.md)
+- [How Market Data Flows Through BORB](./market-data/README.md)
 - [Account and Access](./account-access/README.md)
 - [Uploads and Imports](./uploads/README.md)
 - [Integrations](./integrations/README.md)

@@ -35,6 +35,8 @@ Optimization features help users explore alternative assumptions and identify st
 
 Optimization suggestions support judgment. They do not replace underwriting review.
 
+When market context is available, it helps frame or bound material assumptions. See [How Market Data Flows Through BORB](../market-data/README.md) for the relationship between evidence, scenarios, simulations, optimization and comparisons.
+
 ## 🛠️ Maintenance Notes
 
 - Update this README when optimization entry points, public categories, comparison behavior, or save flow changes.
