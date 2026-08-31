@@ -6,6 +6,19 @@ BORB connects market evidence to underwriting and decision tools while keeping t
 
 Market data informs the analysis. It does not silently replace your deal assumptions, guarantee an outcome or remove the need for professional review.
 
+## Who can use this guide
+
+This guide is available to every Orion Rigel user. What you can do inside BORB depends on your organization and assigned role:
+
+| User | Typical market-data access |
+|---|---|
+| Analyst or investor | View eligible market context, sources, dates, warnings and missing fields attached to an analysis |
+| Reviewer | Review authorized evidence when assigned and record an independent decision |
+| Operator | Monitor intake, coverage and workflow status for the operator's organization |
+| Administrator | Use governed intake, review, benchmark, snapshot and operations workspaces |
+
+Users never enter a tenant UUID. BORB derives the organization from the authenticated session and keeps private evidence isolated by organization.
+
 ## The flow
 
 ```mermaid
@@ -50,6 +63,23 @@ Some evidence requires human review before it can be used in a production underw
 A market snapshot freezes the accepted evidence for a specific property and point in time. It includes field-level source information, confidence, warnings and missing items.
 
 Freezing the snapshot matters because two analyses should not appear identical if they were based on different evidence.
+
+Each published snapshot has an immutable identifier and SHA-256 checksum. These allow BORB to prove which evidence version supported a calculation, solver execution, comparison or decision workpaper.
+
+## Evidence and privacy boundaries
+
+- Original documents enter quarantine before extraction or review.
+- Uploading a document does not approve it or make it solver-eligible.
+- Controlled evidence requires the configured independent-review workflow.
+- Synthetic QA documents are visibly marked and can never become production or snapshot eligible.
+- Private property documents remain scoped to the owning organization.
+- Reusable aggregate benchmarks expose governed results, not another organization's underlying private values.
+
+## What happens when coverage is incomplete
+
+BORB reports each required field as available, missing, stale or blocked. Snapshot assembly remains unavailable until required fields meet the applicable evidence, freshness and review rules. A missing field is a deliberate safety result—not a request to invent a value.
+
+Administrators and assigned reviewers can resolve missing coverage through authorized document intake, evidence review and benchmark publication. Other users can review the displayed limitation and contact their organization's administrator.
 
 ## How BORB uses the snapshot
 
@@ -119,6 +149,8 @@ Decision outputs can bring together scenario assumptions, financial results, mar
 Market-data coverage varies by county, municipality, source availability and licensing or access rules. Some workflows may remain unavailable until evidence and required reviews are complete.
 
 BORB supports underwriting judgment. It does not guarantee investment performance or replace independent due diligence.
+
+The market-evidence platform and its catalog, worker, review, snapshot, audit and rollback controls are implemented. Production eligibility for a specific market still depends on complete real evidence and a compatible published snapshot for that location and property context.
 
 ## Related guides
 
