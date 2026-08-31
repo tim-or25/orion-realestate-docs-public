@@ -24,6 +24,7 @@ Public user documentation for Orion Rigel, focused on product workflows, safe in
 - [Metrics and KPI Basics](./metrics/README.md)
 - [Optimization How-To](./optimization/README.md)
 - [How Market Data Flows Through BORB](./market-data/README.md)
+- [Reverse Solver and Verified Workpapers](./underwriting-reverse-solver/README.md)
 - [Account and Access](./account-access/README.md)
 - [Uploads and Imports](./uploads/README.md)
 - [Integrations](./integrations/README.md)
@@ -31,14 +32,17 @@ Public user documentation for Orion Rigel, focused on product workflows, safe in
 
 ## 👥 Audience
 
-These docs are written for non-admin users who need to understand where features live, how to complete common workflows, and how to interpret outputs responsibly.
+These docs are available to all Orion Rigel users. They are written for analysts, reviewers, operators, administrators, and decision-makers who need to understand where features live, how to complete common workflows, and how to interpret outputs responsibly.
+
+Access to a guide does not grant access to the corresponding product capability. Screens, records, and actions remain controlled by the signed-in user's organization, role, and permissions.
 
 ## 🌐 Public Documentation Rules
 
 Keep these guides focused on user-visible behavior:
 
 - Describe navigation, workflow steps, expected inputs, and interpretation guidance.
-- Avoid internal architecture, privileged admin procedures, secrets, infrastructure details, and private operational runbooks.
+- Explain role-dependent behavior when a workflow is available only to reviewers, operators, or administrators.
+- Avoid internal architecture, credentials, privileged infrastructure procedures, and private operational runbooks.
 - Use support-friendly language when a user should stop, retry, or ask for help.
 
 ## 🛠️ Maintenance Notes
